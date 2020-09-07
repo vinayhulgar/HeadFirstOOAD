@@ -1,4 +1,4 @@
-package com.core.src;
+
 
 import java.util.Iterator;
 import java.util.List;
@@ -9,15 +9,15 @@ public class FindGuitarTester {
 		Inventory inventory = new Inventory();
 		initializeInventory(inventory);
 		
-		//Guitar whatErinLikes = new Guitar("",0,Builder.FENDER,"Stratocastor", Type.ELECTRIC, Wood.ALDER,Wood.ALDER);
-		Guitar whatErinLikes = new Guitar(null,0,Builder.MARTIN,"Stratocastor", Type.ACOUSTIC, Wood.MAHAGONY,Wood.ADIRONDACK);
+		Guitar whatErinLikes = new Guitar("V95693",1499.95,Builder.FENDER,"Stratocastor", Type.ELECTRIC, Wood.ALDER,Wood.ALDER);
+		//Guitar whatErinLikes = new Guitar(null,0,Builder.MARTIN,"Stratocastor", Type.ACOUSTIC, Wood.MAHAGONY,Wood.ADIRONDACK);
 		List<Guitar> guitarlist = inventory.search(whatErinLikes);
 		
 		if(!guitarlist.isEmpty()) {
 			System.out.println("Erin, You Might Like These guitars \n");
 					for(Iterator<Guitar> i = guitarlist.iterator(); i.hasNext();) {
 						Guitar guitar = i.next();
-						GuitarSpec guitarSpec = guitar.getSpec();
+					//	GuitarSpec guitarSpec = guitar.getSpec();
 						
 						System.out.println(
 						guitar.getBuilder() + " " + guitar.getModel() +" " +
