@@ -30,6 +30,7 @@ public class Inventory {
 
     // Search Guitar
     public List<Guitar> search(Guitar searchGuitar){
+        List matchingGuitars = new LinkedList<>();
         for(Iterator<Guitar> i = guitars.iterator(); i.hasNext();){
              Guitar guitar = (Guitar)i.next();
              // Ignore Serial Number since it is unique
@@ -59,9 +60,9 @@ public class Inventory {
             (!topWood.equals(guitar.getTopWood()))){
                 continue;
             }
-            return Arrays.asList(guitar);
+            matchingGuitars.add(guitar);
         }
-        return null;
+        return matchingGuitars;
     }
 
 
