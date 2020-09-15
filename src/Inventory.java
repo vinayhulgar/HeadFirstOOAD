@@ -29,10 +29,10 @@ public class Inventory {
     }
 
     // Search Guitar
-    public List<Guitar> search(Guitar searchGuitar){
+    public List<Guitar> search(GuitarSpec searchGuitar){
         List matchingGuitars = new LinkedList<>();
-        for(Iterator<Guitar> i = guitars.iterator(); i.hasNext();){
-             Guitar guitar = (Guitar)i.next();
+        for(Iterator<GuitarSpec> i = guitars.iterator(); i.hasNext();){
+             GuitarSpec guitar = (GuitarSpec)i.next();
              // Ignore Serial Number since it is unique
              // Ignore price since it is unique
              Builder builder = searchGuitar.getBuilder();

@@ -3,20 +3,21 @@
 import java.util.Iterator;
 import java.util.List;
 
+
 public class FindGuitarTester {
 
-	public static void main(String[] args) {
-		Inventory inventory = new Inventory();
+	public static void main(final String[] args) {
+		final Inventory inventory = new Inventory();
 		initializeInventory(inventory);
 		
-		Guitar whatErinLikes = new Guitar("V95693",1499.95,Builder.FENDER,"Stratocastor", Type.ELECTRIC, Wood.ALDER,Wood.ALDER);
+		final GuitarSpec whatErinLikes = new GuitarSpec(Builder.FENDER,"Stratocastor", Type.ELECTRIC, Wood.ALDER,Wood.ALDER);
 		//Guitar whatErinLikes = new Guitar(null,0,Builder.MARTIN,"Stratocastor", Type.ACOUSTIC, Wood.MAHAGONY,Wood.ADIRONDACK);
-		List<Guitar> guitarlist = inventory.search(whatErinLikes);
+		final List<Guitar> guitarlist = inventory.search(whatErinLikes);
 		
 		if(!guitarlist.isEmpty()) {
 			System.out.println("Erin, You Might Like These guitars \n");
-					for(Iterator<Guitar> i = guitarlist.iterator(); i.hasNext();) {
-						Guitar guitar = i.next();
+					for(final Iterator<Guitar> i = guitarlist.iterator(); i.hasNext();) {
+						final Guitar guitar = i.next();
 					//	GuitarSpec guitarSpec = guitar.getSpec();
 						
 						System.out.println(
@@ -36,7 +37,7 @@ public class FindGuitarTester {
 		
 	}
 
-	private static void initializeInventory(Inventory inventory) {
+	private static void initializeInventory(final Inventory inventory) {
 		inventory.addGuitar("V95693", 1499.95, Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.ALDER, Wood.ALDER);
 		inventory.addGuitar("V9512", 1599.95, Builder.FENDER, "Stratocastor", Type.ELECTRIC, Wood.ALDER, Wood.ALDER);
 	}
