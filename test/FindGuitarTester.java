@@ -2,7 +2,7 @@
 
 import java.util.Iterator;
 import java.util.List;
-
+import Inventory;
 
 public class FindGuitarTester {
 
