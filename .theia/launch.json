@@ -4,17 +4,24 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "java",
-      "name": "Debug (Launch) - Current File",
-      "request": "launch",
-      "mainClass": "${file}"
+        "type": "java",
+        "name": "CodeLens (Launch) - BirdFeederTester",
+        "request": "launch",
+        "mainClass": "swdesign.BirdFeederTester",
+        "projectName": "OOAD_ac41952c"
     },
     {
-      "type": "java",
-      "name": "Debug (Launch)-FindGuitarTester<HeadFirstOOAD_1126358a>",
-      "request": "launch",
-      "mainClass": "FindGuitarTester",
-      "projectName": "HeadFirstOOAD_1126358a"
+        "type": "java",
+        "name": "Debug (Launch) - Current File",
+        "request": "launch",
+        "mainClass": "${file}"
+    },
+    {
+        "type": "java",
+        "name": "Debug (Launch)-FindGuitarTester<HeadFirstOOAD_1126358a>",
+        "request": "launch",
+        "mainClass": "FindGuitarTester",
+        "projectName": "HeadFirstOOAD_1126358a"
     }
-  ]
+]
 }
